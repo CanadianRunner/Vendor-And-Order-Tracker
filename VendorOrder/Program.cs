@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace BakeryStore
+namespace VendorOrder
 {
   public class Program
   {
