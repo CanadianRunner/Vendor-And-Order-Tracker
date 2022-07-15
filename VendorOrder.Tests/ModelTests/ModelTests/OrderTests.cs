@@ -13,5 +13,12 @@ namespace VendorOrder.Tests
     {
       Order.ClearOrders();
     }
+
+[TestMethod]
+public void OrderConstructor_BuildsOrder_Order()
+{
+  Order newOrder = new Order("Daffy Duck", "15 pastries", 83, "2022-07-15");
+  Assert.AreEqual(typeof(Order), newOrder.GetType());
+}
 }
 }
