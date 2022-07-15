@@ -1,0 +1,19 @@
+@using VendorOrder.Models;
+
+<h1>@Model["vendors"].Name</h1>
+<h1>@Model["vendors"].Description</h1>
+
+@if (Model["orders"].Count == 0)
+{
+  <p>This vendor has no orders</p>
+}
+<ol>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendors"].Id/orders/@order.Id'>@order.Name</a></li>
+  }
+</ol>
+
+<a href="/vendors" class="btn">Take me to Vendors!</a>
+<a href="/" class="btn">Home!</a>
+<p><a href='/vendors/@Model["vendors"].Id/orders/new'>Add a new Order</a></p>
