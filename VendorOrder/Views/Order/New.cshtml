@@ -1,0 +1,18 @@
+<<h1>Add a new Order!</h1>
+<h3>Please fill out the form below to add a new order.</h3>
+
+<form action="/vendors/@Model.Id/orders" method="post">
+  <input id="id" name="vendorId" type="hidden" value="@Model.Id">
+  <label for="name">Name of Vendor:</label>
+  <input id="name" name="name" type="text">
+  <label for="description">Information about the vendor:</label>
+  <input id="description" name="description" type="text">
+  <label for="price">Price:</label>
+  <input id="price" name="price" type="number">
+  <label for="date">Date:</label>
+  <input id="date" name="date" type="date">
+  <button type="submit">Submit</button>
+</form>
+
+<a href="/vendors" class="btn">Take me to Vendors!</a>
+<a href="/" class="btn">Home!</a>
