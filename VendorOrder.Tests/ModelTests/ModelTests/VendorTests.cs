@@ -34,5 +34,42 @@ namespace VendorOrder.Tests
       Vendor newVendor = new Vendor("Luke Skywalker", "Moisture farmer on Tatooine"); 
       Assert.AreEqual("Moisture farmer on Tatooine", newVendor.Description);
     }
-  }
+
+    [TestMethod]
+    public void GetId_ReturnsId_Int()
+    {
+      Vendor newVendor = new Vendor("Luke Skywalker", "Moisture farmer on Tatooine"); 
+      int vendorIndex = newVendor.Id;
+      Assert.AreEqual(1, vendorIndex);
+    }
+
+    [TestMethod]
+    public void GetAllVendors_ReturnsAllVendors_VendorList()
+    {
+    Vendor newVendor = new Vendor("Luke Skywalker", "Moisture farmer on Tatooine");
+    Vendor secondVendor = new Vendor("Ankain Skywalker", "Youngling Trainer");
+    List<Vendor> allVendors = new List<Vendor> {newVendor, secondVendor};
+    CollectionAssert.AreEqual(allVendors, Vendor.GetAllVendors());
+    }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrderIndex_Vendor()
+    {
+    Vendor newVendor = new Vendor("Luke Skywalker", "Moisture farmer on Tatooine");
+    Vendor secondVendor = new Vendor("Ankain Skywalker", "Youngling Trainer");
+    List<Vendor> allVendors = new List<Vendor> {newVendor, secondVendor};
+    Assert.AreEqual(secondVendor, Vendor.Find(2));
+    }
+
+    [TestMethod]
+    public void AddOrder_RegisterToOnlyOneVendor_Vendor()
+    {
+    Vendor newVendor = new Vendor("Luke Skywalker", "Moisture farmer on Tatooine");
+    Vendor secondVendor = new Vendor("Ankain Skywalker", "Youngling Trainer");
+    Order newOrder = new Order("Combo 3", "15 pastries", 83, "2022-07-15");
+    List<Order> vendorOrders = new List<Order> {newOrder};
+    newVendor.AddOrder(newOrder);
+    CollectionAssert.AreEqual(vendorOrders, newVendor.OrdersList);
+    }
+}
 }
