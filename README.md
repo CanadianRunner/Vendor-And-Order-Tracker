@@ -13,7 +13,7 @@
 
 
 ## Description
-_This is a project I created at Epicodus that allows Pierres Bakery to track his vendors and orders.  The user is presented with a "Splash Page" and has the options of selecting current vendors or the ability to add a vendor. the starting prices of Pierres baked goods and waits for user input. The user has the ability to add information about the Vendor, along with attributing values to the vendor.  These values include the order name ID, Information about the vendors order, total cost, and date the order was placed. Developing this application helped grow my understanding of C#, .NET, ASP.NET Core MVC, and Testing with C#._
+_This is a project I created at Epicodus that allows Pierres Bakery to track his vendors and orders.  The user is presented with a "Splash Page" and has the options of selecting current vendors or the ability to add a vendor. The user has the ability to add information about the Vendor, along with attributing values to the vendor.  These values include the order name ID, Information about the vendors order, total cost, and date the order was placed. Developing this application helped grow my understanding of C#, .NET, ASP.NET Core MVC, and Testing with C#._
 
 
 ## Setup/Installation Requirements
